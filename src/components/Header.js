@@ -43,7 +43,7 @@ const Header = () => {
                 {/*mobile dropdown*/}
                 <Dropdown isOpen={isDropdownOpen} toggleDropdown={() => setIsDropdownOpen(!isDropdownOpen)}/>
                 <Link to={"/"}>
-                    <div className={"md:ml-10 md:text-4xl"}>
+                    <div className={"md:ml-5 md:text-4xl"}>
                         <img className={"w-[40px]"} src={Logo} alt="Logo"/>
                     </div>
                 </Link>
@@ -51,7 +51,7 @@ const Header = () => {
 
                 <div className={"justify-end items-center hidden sm:flex"}>
                     {/*Women and men categories*/}
-                    <ul className={"justify-center items-center gap-16 uppercase text-2xl font-light flex"}>
+                    <ul className={"justify-center items-center md:gap-12 lg:gap-16 gap-16 uppercase text-2xl font-light flex"}>
                         <li className={"transition transform hover:-translate-y-1"}>
                             <Link to={'/women-clothing'}>
                                 Women
@@ -77,7 +77,7 @@ const Header = () => {
                 {/*mobile menu dropdown*/}
 
                 <div onClick={() => setIsOpen(!isOpen)}
-                     className={"cursor-pointer flex relative max-w-[50px] md:mr-10"}>
+                     className={"cursor-pointer flex relative max-w-[50px] md:mr-5"}>
                     <BsBag className={"text-3xl md:text-4xl"}/>
                     <div
                         className={"bg-red-500 absolute -right-2 -bottom-2 text-[12px] w-[18px] text-white rounded-full flex justify-center items-center"}>
