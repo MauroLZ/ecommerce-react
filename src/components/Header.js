@@ -24,7 +24,7 @@ const Header = () => {
 
 
     return (
-        <header className={`${isActive ? 'bg-white py-4 shadow-md' : 'bg-none py-6'} fixed w-full z-20 transition-all`}>
+        <header className={`${isActive ? 'bg-stone-100 py-4 shadow-md' : 'bg-none py-6'} fixed w-full z-20 transition-all`}>
             <div className={"container flex mx-auto items-center justify-between h-full"}>
                 {/*logo*/}
                 <Link to={"/"}>
@@ -34,7 +34,28 @@ const Header = () => {
                 </Link>
                 {/*cart */}
 
-                <div onClick={() => setIsOpen(!isOpen)} className={"cursor-pointer flex relative max-w-[50px] md:mr-10"}>
+                <div className={"flex justify-end items-center"}>
+                    {/*Women and men categories*/}
+                    <ul className={"justify-center items-center gap-16 uppercase text-2xl font-light hidden sm:flex "}>
+                        <li className={"transition transform hover:-translate-y-1"}>
+                            <Link to={'/women-clothing'}>
+                                Women
+                            </Link>
+                        </li>
+                        <li className={"transition transform hover:-translate-y-1"}>
+                            <Link to={'/men-clothing'}>
+                                Men
+                            </Link>
+                        </li>
+                        <li className={"transition transform hover:-translate-y-1"}>
+                            <Link to={'/'}>
+                                Trending
+                            </Link>
+                        </li>
+                    </ul>
+                </div>
+                <div onClick={() => setIsOpen(!isOpen)}
+                     className={"cursor-pointer flex relative max-w-[50px] md:mr-10"}>
                     <BsBag className={"text-2xl md:text-4xl"}/>
                     <div
                         className={"bg-red-500 absolute -right-2 -bottom-2 text-[12px] w-[18px] text-white rounded-full flex justify-center items-center"}>
