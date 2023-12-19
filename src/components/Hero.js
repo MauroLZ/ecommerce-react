@@ -16,12 +16,12 @@ const Hero = () => {
                     New Trends
                 </div>
                 <h1 className={"text-[70px] leading-[1.1] font-light mb-4"}>
-                    WINTER SALE STYLISH <br/>
+                    SEASONAL STYLISH <br/>
                     <span className={"font-semibold"}>
                             Women's Clothing
                         </span>
                 </h1>
-                <Link to={'/'} className={"self-start uppercase font-semibold border-b-2 border-primary"}>
+                <Link to={'/women-clothing'} className={"self-start uppercase font-semibold border-b-2 border-primary"}>
                     Discover More
                 </Link>
             </div>

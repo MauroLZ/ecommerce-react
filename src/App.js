@@ -3,13 +3,12 @@ import React from 'react';
 import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 // import pages
 import Home from './pages/Home';
+import WomenClothing from './pages/WomenClothing';
+import MenClothing from './pages/MenClothing';
 import ProductDetails from './pages/ProductDetails';
 // import components
 import Header from './components/Header';
 import Footer from './components/Footer';
-import CartItem from "./components/CartItem";
-import Hero from "./components/Hero";
-import Product from "./components/Product";
 import Sidebar from "./components/Sidebar";
 
 const App = () => {
@@ -17,8 +16,10 @@ const App = () => {
         <Router>
             <Header/>
             <Routes>
-                <Route path='/' element={<Home />}/>
+                <Route path='/' element={<Home/>}/>
                 <Route path='/product/:id' element={<ProductDetails/>}/>
+                <Route path='/women-clothing' element={<WomenClothing/>}/>
+                <Route path='/men-clothing' element={<MenClothing/>}/>
             </Routes>
             <Sidebar/>
             <Footer/>
